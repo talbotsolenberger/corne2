@@ -21,7 +21,7 @@
                 combo_caps {
                         timeout-ms = <30>;
                         key-positions = <17 18 19>;
-                        bindings = <&caps-word>;
+                        bindings = <&caps_word>;
                 };
                 combo_gaming {
                         timeout-ms = <30>;
