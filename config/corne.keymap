@@ -29,12 +29,12 @@
         combos {
                 compatible = "zmk,combos";
                 combo_caps {
-                        timeout-ms = <30>;
+                        timeout-ms = <60>;
                         key-positions = <17 18 19>;
                         bindings = <&caps_word>;
                 };
                 combo_gaming {
-                        timeout-ms = <30>;
+                        timeout-ms = <60>;
                         key-positions = <29 30 31>;
                         bindings = <&to GAME>;
                 };
@@ -66,7 +66,7 @@
                 alphas_layer0 {
                 bindings = <
         &trans          &kp Q           &kp W           &kp E           &kp R           &kp T                   &kp Y           &kp U           &kp I           &kp O           &kp P           &trans
-        &trans          &kp A           &kp S           &kp D           &kp F           &kp G                   &kp H           &kp J           &kp K           &kp L           &kp SEMI        &trans
+        &trans          &kp A           &hrl SYM S      &hrl NAV D      &hrl NUM F      &kp G                   &kp H           &hrl NUM J      &hrl NAV K      &hrl SYM L      &kp SEMI        &trans
         &trans          &kp Z           &kp X           &kp C           &kp V           &kp B                   &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &trans
                                                 &OSsym          &mt LC(LS(LALT)) SPACE  &kp LCTRL               &kp BSPC        &sk RSHFT       &kp RALT
                         >;
