@@ -44,7 +44,7 @@
                 OSsym: macro_1 {
                         compatible = "zmk,behavior-macro";
                         label = "MACRO1";
-                        #bind-cells = <0>;
+                        #binding-cells = <0>;
                         bindings = <&sl SYM>;
                 };
                 hrl: homerow_layers {
