@@ -29,14 +29,14 @@
         combos {
                 compatible = "zmk,combos";
                 combo_caps {
-                        timeout-ms = <60>;
-                        key-positions = <17 18 19>;
+                        timeout-ms = <30>;
+                        key-positions = <20 21 22>;
                         bindings = <&caps_word>;
                         layers = <AL>;
                 };
                 combo_gaming {
-                        timeout-ms = <60>;
-                        key-positions = <29 30 31>;
+                        timeout-ms = <30>;
+                        key-positions = <33 34 35>;
                         bindings = <&to GAME>;
                         layers = <AL>;
                 };
