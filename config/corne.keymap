@@ -26,21 +26,6 @@
 #define GAME 4
 
 / {
-        combos {
-                compatible = "zmk,combos";
-                combo_caps {
-                        timeout-ms = <30>;
-                        key-positions = <19 20 21>;
-                        bindings = <&caps_word>;
-                        layers = <AL>;
-                };
-                combo_gaming {
-                        timeout-ms = <30>;
-                        key-positions = <32 33 34>;
-                        bindings = <&to 4>;
-                        layers = <AL>;
-                };
-        };
 
         behaviors {
                 OSsym: macro_1 {
@@ -59,6 +44,29 @@
                         bindings = <&mo>, <&kp>;
                 };
         };
+
+        combos {
+                compatible = "zmk,combos";
+                combo_caps {
+                        timeout-ms = <30>;
+                        key-positions = <19 20 21>;
+                        bindings = <&caps_word>;
+                        layers = <AL>;
+                };
+                combo_gaming {
+                        timeout-ms = <30>;
+                        key-positions = <32 33 34>;
+                        bindings = <&to 4>;
+                        layers = <AL>;
+                };
+                combo_OSsym {
+			timeout-ms = <30>;
+			key-position = <15 16>;
+			bindings = <&OSsym>;
+		        layers = <AL>;
+		};
+        };
+
 };
 
 / {
