@@ -40,6 +40,12 @@
                         bindings = <&to 4>;
                         layers = <AL>;
                 };
+								combo_OSsym {
+												timeout-ms = <30>;
+												key-position = <15 16>;
+												bindings = <&OSsym>;
+												layers = <AL>;
+								};
         };
 
         behaviors {
