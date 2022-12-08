@@ -41,11 +41,23 @@
         };
 
         macros {
-                OSsym: macro_1 {
+                OSsym: one_shot_system_layer {
                         compatible = "zmk,behavior-macro";
                         label = "MACRO1";
                         #binding-cells = <0>;
                         bindings = <&sl SYM>;
+                };
+                ios_saf: ios_safari {
+                        compatible = "zmk,behavior-macro";
+                        label = "MACRO2";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LCTRL>
+                                , <&macro_tap &kp SPACE>
+                                , <&macro_release &kp LCTRL>
+                                , <&macro_tap &kp S &kp A &kp F>
+                                , <&macro_tap &kp ENTER>
+                                ;
                 };
         };
 
@@ -137,7 +149,7 @@
                 ios_layer5 {
                 bindings = <
         &trans          &trans          &trans          &trans          &trans          &trans                  &trans          &trans          &trans          &trans          &trans          &trans
-        &trans          &trans          &trans          &trans          &trans          &trans                  &trans          &trans          &trans          &trans          &trans          &trans
+        &trans          &ios_saf        &trans          &trans          &trans          &trans                  &trans          &trans          &trans          &trans          &trans          &trans
         &trans          &trans          &trans          &trans          &trans          &trans                  &trans          &trans          &trans          &trans          &trans          &trans
                                                         &trans          &trans          &trans                  &trans          &trans          &to AL
                         >;
