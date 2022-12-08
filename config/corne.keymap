@@ -59,6 +59,66 @@
                                 , <&macro_tap &kp ENTER>
                                 ;
                 };
+                ios_set: ios_settings {
+                        compatible = "zmk,behavior-macro";
+                        label = "MACRO3";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LCTRL>
+                                , <&macro_tap &kp SPACE>
+                                , <&macro_release &kp LCTRL>
+                                , <&macro_tap &kp S &kp E &kp T>
+                                , <&macro_tap &kp ENTER>
+                                ;
+                };
+                ios_you: ios_youtube {
+                        compatible = "zmk,behavior-macro";
+                        label = "MACRO4";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LCTRL>
+                                , <&macro_tap &kp SPACE>
+                                , <&macro_release &kp LCTRL>
+                                , <&macro_tap &kp Y &kp O &kp U>
+                                , <&macro_tap &kp ENTER>
+                                ;
+                };
+                ios_file: ios_files {
+                        compatible = "zmk,behavior-macro";
+                        label = "MACRO5";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LCTRL>
+                                , <&macro_tap &kp SPACE>
+                                , <&macro_release &kp LCTRL>
+                                , <&macro_tap &kp F &kp I &kp L>
+                                , <&macro_tap &kp ENTER>
+                                ;
+                };
+                ios_note: ios_notes {
+                        compatible = "zmk,behavior-macro";
+                        label = "MACRO6";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LCTRL>
+                                , <&macro_tap &kp SPACE>
+                                , <&macro_release &kp LCTRL>
+                                , <&macro_tap &kp N &kp O &kp T>
+                                , <&macro_tap &kp ENTER>
+                                ;
+                };
+                ios_ghub: ios_github {
+                        compatible = "zmk,behavior-macro";
+                        label = "MACRO7";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LCTRL>
+                                , <&macro_tap &kp SPACE>
+                                , <&macro_release &kp LCTRL>
+                                , <&macro_tap &kp G &kp I &kp T &kp H>
+                                , <&macro_tap &kp ENTER>
+                                ;
+                };
         };
 
         combos {
@@ -148,9 +208,9 @@
 
                 ios_layer5 {
                 bindings = <
-        &trans          &trans          &trans          &trans          &trans          &trans                  &trans          &trans          &trans          &trans          &trans          &trans
-        &trans          &ios_saf        &trans          &trans          &trans          &trans                  &trans          &trans          &trans          &trans          &trans          &trans
-        &trans          &trans          &trans          &trans          &trans          &trans                  &trans          &trans          &trans          &trans          &trans          &trans
+        &trans          &trans          &trans          &ios_set        &trans          &trans                  &ios_you        &trans          &trans          &trans          &trans          &trans
+        &trans          &trans          &ios_saf        &trans          &trans          &ios_file               &ios_ghub       &trans          &trans          &trans          &trans          &trans
+        &trans          &trans          &trans          &trans          &trans          &trans                  &ios_note       &trans          &trans          &trans          &trans          &trans
                                                         &trans          &trans          &trans                  &trans          &trans          &to AL
                         >;
                 };
