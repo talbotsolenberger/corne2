@@ -24,16 +24,11 @@
 #define NAV 2
 #define NUM 3
 #define GAME 4
+#define IOS 5
 
 / {
 
         behaviors {
-                OSsym: macro_1 {
-                        compatible = "zmk,behavior-macro";
-                        label = "MACRO1";
-                        #binding-cells = <0>;
-                        bindings = <&sl SYM>;
-                };
                 hrl: homerow_layers {
                         compatible = "zmk,behavior-hold-tap";
                         label = "HOMEROW_LAYERS";
@@ -42,6 +37,15 @@
                         quick_tap_ms = <0>;
                         flavor = "tap-preferred";
                         bindings = <&mo>, <&kp>;
+                };
+        };
+
+        macros {
+                OSsym: macro_1 {
+                        compatible = "zmk,behavior-macro";
+                        label = "MACRO1";
+                        #binding-cells = <0>;
+                        bindings = <&sl SYM>;
                 };
         };
 
@@ -59,12 +63,24 @@
                         bindings = <&to 4>;
                         layers = <AL>;
                 };
-                combo_OSsym {
+                combo_OSsym_left {
 			timeout-ms = <30>;
 			key-positions = <15 16>;
 			bindings = <&OSsym>;
 		        layers = <AL>;
 		};
+                combo_OSsym_right {
+			timeout-ms = <30>;
+			key-positions = <19 20>;
+			bindings = <&OSsym>;
+		        layers = <AL>;
+		};
+                combo_ios {
+                        timeout-ms = <30>;
+                        key-positions = <2 3 4>;
+                        bindings = <&sl IOS>;
+                        layers = <AL>;
+                };
         };
 
 };
@@ -115,6 +131,15 @@
         &trans          &kp LSHFT       &kp A           &kp S           &kp D           &kp F                   &kp C_VOL_DN    &kp LEFT        &kp DOWN        &kp RIGHT       &kp F18         &trans
         &trans          &kp LCTRL       &kp Z           &kp X           &kp C           &kp V                   &trans          &trans          &trans          &trans          &kp C_PP        &trans
                                                         &kp F10         &kp SPACE       &kp LALT                &kp ESC         &kp ENTER       &to AL
+                        >;
+                };
+
+                ios_layer5 {
+                bindings = <
+        &trans          &trans          &trans          &trans          &trans          &trans                  &trans          &trans          &trans          &trans          &trans          &trans
+        &trans          &trans          &trans          &trans          &trans          &trans                  &trans          &trans          &trans          &trans          &trans          &trans
+        &trans          &trans          &trans          &trans          &trans          &trans                  &trans          &trans          &trans          &trans          &trans          &trans
+                                                        &trans          &trans          &trans                  &trans          &trans          &to AL
                         >;
                 };
 
