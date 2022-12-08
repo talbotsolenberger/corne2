@@ -209,7 +209,7 @@
                 ios_layer5 {
                 bindings = <
         &trans          &trans          &trans          &ios_set        &trans          &trans                  &ios_you        &trans          &trans          &trans          &trans          &trans
-        &trans          &trans          &ios_saf        &trans          &trans          &ios_file               &ios_ghub       &trans          &trans          &trans          &trans          &trans
+        &trans          &trans          &ios_saf        &trans          &ios_file       &trans                  &ios_ghub       &trans          &trans          &trans          &trans          &trans
         &trans          &trans          &trans          &trans          &trans          &trans                  &ios_note       &trans          &trans          &trans          &trans          &trans
                                                         &trans          &trans          &trans                  &trans          &trans          &to AL
                         >;
