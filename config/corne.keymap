@@ -131,7 +131,19 @@
                                 , <&macro_tap &kp ENTER>
                                 ;
                 };
-               
+                ios_wc: ios_workingcopy {
+                        compatible = "zmk,behavior-macro";
+                        label = "MACRO9";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LCTRL>
+                                , <&macro_tap &kp SPACE>
+                                , <&macro_release &kp LCTRL>
+                                , <&macro_tap &kp W &kp O &kp R &kp K>
+                                , <&macro_tap &kp ENTER>
+                                ;
+                };
+              
         };
 
         combos {
@@ -221,7 +233,7 @@
 
                 ios_layer5 {
                 bindings = <
-        &trans          &trans          &trans          &ios_set        &trans          &trans                  &ios_you        &trans          &trans          &trans          &trans          &trans
+        &trans          &trans          &ios_wc         &ios_set        &trans          &trans                  &ios_you        &trans          &trans          &trans          &trans          &trans
         &trans          &trans          &ios_saf        &trans          &ios_file       &trans                  &ios_ghub       &trans          &trans          &trans          &trans          &trans
         &trans          &trans          &trans          &ios_code       &trans          &trans                  &ios_note       &trans          &trans          &trans          &trans          &trans
                                                         &trans          &trans          &trans                  &trans          &trans          &to AL
