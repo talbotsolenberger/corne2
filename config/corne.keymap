@@ -143,7 +143,18 @@
                                 , <&macro_tap &kp ENTER>
                                 ;
                 };
-              
+                ios_app: ios_appstore {
+                        compatible = "zmk,behavior-macro";
+                        label = "MACRO10";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LCTRL>
+                                , <&macro_tap &kp SPACE>
+                                , <&macro_release &kp LCTRL>
+                                , <&macro_tap &kp A &kp P &kp P>
+                                , <&macro_tap &kp ENTER>
+                                ;
+                };
         };
 
         combos {
@@ -243,4 +254,3 @@
         };
 };
 
-/* test */
